@@ -1,4 +1,4 @@
-## Swift `UICollectionView` with circle of cells
+## Swift UICollectionView with circle arrangement of cells
 
 This is an demonstration of using custom `UICollectionViewLayout` to lay out a series of cells in a circle in Swift.
 
