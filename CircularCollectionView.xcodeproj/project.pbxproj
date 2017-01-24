@@ -12,7 +12,36 @@
 		83936CDB1E37F2DE00E90FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83936CD91E37F2DE00E90FD8 /* Main.storyboard */; };
 		83936CDD1E37F2DE00E90FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83936CDC1E37F2DE00E90FD8 /* Assets.xcassets */; };
 		83936CE01E37F2DE00E90FD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83936CDE1E37F2DE00E90FD8 /* LaunchScreen.storyboard */; };
+		83936CF01E37F2FD00E90FD8 /* CircularCollectionViewKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 83936CEE1E37F2FD00E90FD8 /* CircularCollectionViewKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83936CF31E37F2FD00E90FD8 /* CircularCollectionViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83936CEC1E37F2FC00E90FD8 /* CircularCollectionViewKit.framework */; };
+		83936CF41E37F2FD00E90FD8 /* CircularCollectionViewKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83936CEC1E37F2FC00E90FD8 /* CircularCollectionViewKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83936CFA1E37F30F00E90FD8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936CF91E37F30F00E90FD8 /* CircleView.swift */; };
+		83936CFC1E37F47200E90FD8 /* CircleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936CFB1E37F47200E90FD8 /* CircleLayout.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83936CF11E37F2FD00E90FD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83936CCA1E37F2DE00E90FD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83936CEB1E37F2FC00E90FD8;
+			remoteInfo = CircularCollectionViewKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83936CF81E37F2FD00E90FD8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				83936CF41E37F2FD00E90FD8 /* CircularCollectionViewKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		83936CD21E37F2DE00E90FD8 /* CircularCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +51,24 @@
 		83936CDC1E37F2DE00E90FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83936CDF1E37F2DE00E90FD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83936CE11E37F2DE00E90FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83936CEC1E37F2FC00E90FD8 /* CircularCollectionViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircularCollectionViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83936CEE1E37F2FD00E90FD8 /* CircularCollectionViewKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularCollectionViewKit.h; sourceTree = "<group>"; };
+		83936CEF1E37F2FD00E90FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83936CF91E37F30F00E90FD8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		83936CFB1E37F47200E90FD8 /* CircleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayout.swift; sourceTree = "<group>"; };
+		83936CFD1E38021000E90FD8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = CircularCollectionView/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		83936CCF1E37F2DE00E90FD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83936CF31E37F2FD00E90FD8 /* CircularCollectionViewKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83936CE81E37F2FC00E90FD8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,7 +81,9 @@
 		83936CC91E37F2DE00E90FD8 = {
 			isa = PBXGroup;
 			children = (
+				83936CFD1E38021000E90FD8 /* README.md */,
 				83936CD41E37F2DE00E90FD8 /* CircularCollectionView */,
+				83936CED1E37F2FD00E90FD8 /* CircularCollectionViewKit */,
 				83936CD31E37F2DE00E90FD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				83936CD21E37F2DE00E90FD8 /* CircularCollectionView.app */,
+				83936CEC1E37F2FC00E90FD8 /* CircularCollectionViewKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +102,7 @@
 			children = (
 				83936CD51E37F2DE00E90FD8 /* AppDelegate.swift */,
 				83936CD71E37F2DE00E90FD8 /* ViewController.swift */,
+				83936CFB1E37F47200E90FD8 /* CircleLayout.swift */,
 				83936CD91E37F2DE00E90FD8 /* Main.storyboard */,
 				83936CDC1E37F2DE00E90FD8 /* Assets.xcassets */,
 				83936CDE1E37F2DE00E90FD8 /* LaunchScreen.storyboard */,
@@ -64,7 +111,28 @@
 			path = CircularCollectionView;
 			sourceTree = "<group>";
 		};
+		83936CED1E37F2FD00E90FD8 /* CircularCollectionViewKit */ = {
+			isa = PBXGroup;
+			children = (
+				83936CEE1E37F2FD00E90FD8 /* CircularCollectionViewKit.h */,
+				83936CF91E37F30F00E90FD8 /* CircleView.swift */,
+				83936CEF1E37F2FD00E90FD8 /* Info.plist */,
+			);
+			path = CircularCollectionViewKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		83936CE91E37F2FC00E90FD8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83936CF01E37F2FD00E90FD8 /* CircularCollectionViewKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		83936CD11E37F2DE00E90FD8 /* CircularCollectionView */ = {
@@ -74,15 +142,35 @@
 				83936CCE1E37F2DE00E90FD8 /* Sources */,
 				83936CCF1E37F2DE00E90FD8 /* Frameworks */,
 				83936CD01E37F2DE00E90FD8 /* Resources */,
+				83936CF81E37F2FD00E90FD8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				83936CF21E37F2FD00E90FD8 /* PBXTargetDependency */,
 			);
 			name = CircularCollectionView;
 			productName = CircularCollectionView;
 			productReference = 83936CD21E37F2DE00E90FD8 /* CircularCollectionView.app */;
 			productType = "com.apple.product-type.application";
+		};
+		83936CEB1E37F2FC00E90FD8 /* CircularCollectionViewKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83936CF51E37F2FD00E90FD8 /* Build configuration list for PBXNativeTarget "CircularCollectionViewKit" */;
+			buildPhases = (
+				83936CE71E37F2FC00E90FD8 /* Sources */,
+				83936CE81E37F2FC00E90FD8 /* Frameworks */,
+				83936CE91E37F2FC00E90FD8 /* Headers */,
+				83936CEA1E37F2FC00E90FD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircularCollectionViewKit;
+			productName = CircularCollectionViewKit;
+			productReference = 83936CEC1E37F2FC00E90FD8 /* CircularCollectionViewKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +185,12 @@
 					83936CD11E37F2DE00E90FD8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = UZAPXQTVQ4;
+						ProvisioningStyle = Automatic;
+					};
+					83936CEB1E37F2FC00E90FD8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = UZAPXQTVQ4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -115,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				83936CD11E37F2DE00E90FD8 /* CircularCollectionView */,
+				83936CEB1E37F2FC00E90FD8 /* CircularCollectionViewKit */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +225,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83936CEA1E37F2FC00E90FD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +240,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				83936CD81E37F2DE00E90FD8 /* ViewController.swift in Sources */,
+				83936CFC1E37F47200E90FD8 /* CircleLayout.swift in Sources */,
 				83936CD61E37F2DE00E90FD8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83936CE71E37F2FC00E90FD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83936CFA1E37F30F00E90FD8 /* CircleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83936CF21E37F2FD00E90FD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83936CEB1E37F2FC00E90FD8 /* CircularCollectionViewKit */;
+			targetProxy = 83936CF11E37F2FD00E90FD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		83936CD91E37F2DE00E90FD8 /* Main.storyboard */ = {
@@ -260,6 +379,7 @@
 		83936CE51E37F2DE00E90FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UZAPXQTVQ4;
 				INFOPLIST_FILE = CircularCollectionView/Info.plist;
@@ -273,6 +393,7 @@
 		83936CE61E37F2DE00E90FD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UZAPXQTVQ4;
 				INFOPLIST_FILE = CircularCollectionView/Info.plist;
@@ -280,6 +401,53 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.robertmryan.CircularCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		83936CF61E37F2FD00E90FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CircularCollectionViewKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertmryan.CircularCollectionViewKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		83936CF71E37F2FD00E90FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CircularCollectionViewKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertmryan.CircularCollectionViewKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -300,6 +468,14 @@
 			buildConfigurations = (
 				83936CE51E37F2DE00E90FD8 /* Debug */,
 				83936CE61E37F2DE00E90FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		83936CF51E37F2FD00E90FD8 /* Build configuration list for PBXNativeTarget "CircularCollectionViewKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83936CF61E37F2FD00E90FD8 /* Debug */,
+				83936CF71E37F2FD00E90FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

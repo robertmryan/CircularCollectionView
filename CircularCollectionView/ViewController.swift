@@ -8,18 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UICollectionViewController {
+    
+    var numberOfCells = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        collectionView?.collectionViewLayout = CircleLayout()
+        
+        // just for giggles and grins, let's show the insertion of a cell
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.collectionView?.performBatchUpdates({
+                self.numberOfCells += 1
+                self.collectionView?.insertItems(at: [IndexPath(item: 0, section: 0)])
+            }, completion: nil)
+        }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.collectionView?.performBatchUpdates({
+                self.numberOfCells -= 1
+                self.collectionView?.deleteItems(at: [IndexPath(item: 0, section: 0)])
+            }, completion: nil)
+        }
+}
 }
 
+// MARK: UICollectionViewDataSource
+
+extension ViewController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numberOfCells
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CircleCell", for: indexPath)
+        return cell
+    }
+}
