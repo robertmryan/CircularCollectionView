@@ -56,7 +56,7 @@
 		83936CEF1E37F2FD00E90FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83936CF91E37F30F00E90FD8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		83936CFB1E37F47200E90FD8 /* CircleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayout.swift; sourceTree = "<group>"; };
-		83936CFD1E38021000E90FD8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = CircularCollectionView/README.md; sourceTree = "<group>"; };
+		83936CFE1E38058E00E90FD8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 		83936CC91E37F2DE00E90FD8 = {
 			isa = PBXGroup;
 			children = (
-				83936CFD1E38021000E90FD8 /* README.md */,
+				83936CFE1E38058E00E90FD8 /* README.md */,
 				83936CD41E37F2DE00E90FD8 /* CircularCollectionView */,
 				83936CED1E37F2FD00E90FD8 /* CircularCollectionViewKit */,
 				83936CD31E37F2DE00E90FD8 /* Products */,
