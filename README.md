@@ -4,6 +4,12 @@ This is an demonstration of using custom `UICollectionViewLayout` to lay out a s
 
 See WWDC 2012 video [Advanced Collection Views and Building Custom Layouts](https://developer.apple.com/videos/play/wwdc2012/219/), which shows an example of precisely this, using a custom circular layout (about 40+ minutes into the video). That was written in Objective-C. This is a Swift 3 implementation.
 
+This yields:
+
+![circular layout](https://i.stack.imgur.com/pwsQj.gif)
+
+Alternatively, if you want to see these circular views laid out so they're touching each other in a grid layout, see the [alternating-grid](https://github.com/robertmryan/CircularCollectionView/tree/alternating-grid) branch of this repo.
+
 But the basic idea is to create a custom `UICollectionViewLayout` that implements:
 
 - `collectionViewContentSize`;
