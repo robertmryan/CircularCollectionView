@@ -32,7 +32,16 @@ class ViewController: UICollectionViewController {
                 self.collectionView?.deleteItems(at: [IndexPath(item: 0, section: 0)])
             }, completion: nil)
         }
-}
+    }
+    
+    // update collection view if size changes (e.g. rotate device)
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animateAlongsideTransition(in: view, animation: { context in
+            self.collectionView?.performBatchUpdates({
+            }, completion: nil)
+        }, completion: nil)
+    }
 }
 
 // MARK: UICollectionViewDataSource
