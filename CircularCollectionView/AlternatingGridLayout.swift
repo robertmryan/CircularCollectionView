@@ -10,13 +10,12 @@ import UIKit
 
 class AlternatingGridLayout: UICollectionViewLayout {
     
-    private var center: CGPoint!
     private var itemSize: CGSize!
     private var numberOfItems: Int!
     private var itemsPerRow: Int!
     private var rows: Int!
     private var circleViewCenterOffset: CGPoint!
-    private var radius: CGFloat!
+    private var radiusOfCircleViews: CGFloat!
     private var insets: UIEdgeInsets!
     
     override func prepare() {
@@ -24,21 +23,20 @@ class AlternatingGridLayout: UICollectionViewLayout {
         
         guard let collectionView = collectionView else { return }
         
-        center = CGPoint(x: collectionView.bounds.midX, y: collectionView.bounds.midY)
-        radius = CGFloat(40.0)
-        itemSize = CGSize(width: radius * 2, height: radius * 2)
-        circleViewCenterOffset = CGPoint(x: 2 * radius * cos(.pi / 3),
-                                         y: 2 * radius * sin(.pi / 3))
+        radiusOfCircleViews = CGFloat(40.0)
+        itemSize = CGSize(width: radiusOfCircleViews * 2, height: radiusOfCircleViews * 2)
+        circleViewCenterOffset = CGPoint(x: 2 * radiusOfCircleViews * cos(.pi / 3),
+                                         y: 2 * radiusOfCircleViews * sin(.pi / 3))
         numberOfItems = collectionView.numberOfItems(inSection: 0)
-        itemsPerRow = Int(floor((collectionView.bounds.width - radius) / CGFloat(2 * radius)) + 0.5)
+        itemsPerRow = Int(floor((collectionView.bounds.width - radiusOfCircleViews) / CGFloat(2 * radiusOfCircleViews)) + 0.5)
         rows = (numberOfItems - 1) / itemsPerRow + 1
-        let excess = collectionView.bounds.width - (CGFloat(itemsPerRow) * radius * 2 + circleViewCenterOffset.x)
+        let excess = collectionView.bounds.width - (CGFloat(itemsPerRow) * radiusOfCircleViews * 2 + circleViewCenterOffset.x)
         insets = UIEdgeInsets(top: 10, left: excess / 2, bottom: 10, right: excess / 2)
     }
     
     override var collectionViewContentSize: CGSize {
         return CGSize(width: collectionView!.bounds.width,
-                      height: 2 * radius + CGFloat(rows - 1) * circleViewCenterOffset.y + insets.top + insets.bottom)
+                      height: 2 * radiusOfCircleViews + CGFloat(rows - 1) * circleViewCenterOffset.y + insets.top + insets.bottom)
     }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
@@ -60,8 +58,8 @@ class AlternatingGridLayout: UICollectionViewLayout {
         let row = indexPath.item / itemsPerRow
         let col = indexPath.item - row * itemsPerRow
         
-        var x: CGFloat = radius + CGFloat(col) * (radius * 2)
-        let y: CGFloat = radius + CGFloat(row) * (circleViewCenterOffset.y)
+        var x: CGFloat = radiusOfCircleViews + CGFloat(col) * (radiusOfCircleViews * 2)
+        let y: CGFloat = radiusOfCircleViews + CGFloat(row) * (circleViewCenterOffset.y)
         
         if row % 2 == 0 {
             x += circleViewCenterOffset.x
@@ -73,7 +71,7 @@ class AlternatingGridLayout: UICollectionViewLayout {
     private func rectForItem(at indexPath: IndexPath) -> CGRect {
         let center = centerForItem(at: indexPath)
         
-        return CGRect(x: center.x - radius, y: center.y - radius, width: radius * 2, height: radius * 2)
+        return CGRect(x: center.x - radiusOfCircleViews, y: center.y - radiusOfCircleViews, width: radiusOfCircleViews * 2, height: radiusOfCircleViews * 2)
     }
     
 }
