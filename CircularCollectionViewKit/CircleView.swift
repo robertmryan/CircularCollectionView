@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CircleView: UIView {
+@IBDesignable public class CircleView: UIView {
 
     @IBInspectable public var fillColor: UIColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)    { didSet { setNeedsLayout() } }
     @IBInspectable public var strokeColor: UIColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 0)  { didSet { setNeedsLayout() } }
@@ -20,7 +20,7 @@ import UIKit
         return _shapeLayer
     }()
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         let center = CGPoint(x: bounds.midX, y: bounds.midY)

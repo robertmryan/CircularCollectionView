@@ -1,8 +1,10 @@
-## Swift UICollectionView with circle arrangement of cells
+## Swift UICollectionView with circle views touching each other
 
-This is an demonstration of using custom `UICollectionViewLayout` to lay out a series of cells in a circle in Swift.
+This is an demonstration of using custom `UICollectionViewLayout` to lay out a series of cells in a custom layout in Swift. The layout used by this particular branch is:
 
-See WWDC 2012 video [Advanced Collection Views and Building Custom Layouts](https://developer.apple.com/videos/play/wwdc2012/219/), which shows an example of precisely this, using a custom circular layout (about 40+ minutes into the video). That was written in Objective-C. This is a Swift 3 implementation.
+![Custom layout](https://i.stack.imgur.com/LmhdN.png)
+
+See WWDC 2012 video [Advanced Collection Views and Building Custom Layouts](https://developer.apple.com/videos/play/wwdc2012/219/) outlines how to create your own custom layouts like this.
 
 But the basic idea is to create a custom `UICollectionViewLayout` that implements:
 

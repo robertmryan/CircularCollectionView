@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UICollectionViewController {
     
-    var numberOfCells = 10
+    var numberOfCells = 200
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.collectionViewLayout = CircleLayout()
+        collectionView?.collectionViewLayout = AlternatingGridLayout()
         
         // just for giggles and grins, let's show the insertion of a cell
         

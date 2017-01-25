@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		836699ED1E39379A00EFEC61 /* AlternatingGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836699EC1E39379A00EFEC61 /* AlternatingGridLayout.swift */; };
 		83936CD61E37F2DE00E90FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936CD51E37F2DE00E90FD8 /* AppDelegate.swift */; };
 		83936CD81E37F2DE00E90FD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83936CD71E37F2DE00E90FD8 /* ViewController.swift */; };
 		83936CDB1E37F2DE00E90FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83936CD91E37F2DE00E90FD8 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		836699EC1E39379A00EFEC61 /* AlternatingGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlternatingGridLayout.swift; sourceTree = "<group>"; };
 		83936CD21E37F2DE00E90FD8 /* CircularCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83936CD51E37F2DE00E90FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83936CD71E37F2DE00E90FD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				83936CD51E37F2DE00E90FD8 /* AppDelegate.swift */,
 				83936CD71E37F2DE00E90FD8 /* ViewController.swift */,
 				83936CFB1E37F47200E90FD8 /* CircleLayout.swift */,
+				836699EC1E39379A00EFEC61 /* AlternatingGridLayout.swift */,
 				83936CD91E37F2DE00E90FD8 /* Main.storyboard */,
 				83936CDC1E37F2DE00E90FD8 /* Assets.xcassets */,
 				83936CDE1E37F2DE00E90FD8 /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				83936CD81E37F2DE00E90FD8 /* ViewController.swift in Sources */,
 				83936CFC1E37F47200E90FD8 /* CircleLayout.swift in Sources */,
 				83936CD61E37F2DE00E90FD8 /* AppDelegate.swift in Sources */,
+				836699ED1E39379A00EFEC61 /* AlternatingGridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +474,7 @@
 				83936CE61E37F2DE00E90FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83936CF51E37F2FD00E90FD8 /* Build configuration list for PBXNativeTarget "CircularCollectionViewKit" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +483,7 @@
 				83936CF71E37F2FD00E90FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
