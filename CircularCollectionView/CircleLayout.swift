@@ -47,4 +47,45 @@ class CircleLayout: UICollectionViewLayout {
             self.layoutAttributesForItem(at: IndexPath(item: item, section: 0))
         }
     }
+    
+    var inserted: [IndexPath]?
+    var deleted: [IndexPath]?
+    
+    override func prepare(forCollectionViewUpdates updateItems: [UICollectionViewUpdateItem]) {
+        super.prepare(forCollectionViewUpdates: updateItems)
+        
+        inserted = updateItems
+            .filter { $0.updateAction == .insert }
+            .flatMap { $0.indexPathAfterUpdate }
+        deleted = updateItems
+            .filter { $0.updateAction == .delete }
+            .flatMap { $0.indexPathBeforeUpdate }
+    }
+    
+    override func finalizeCollectionViewUpdates() {
+        super.finalizeCollectionViewUpdates()
+        
+        inserted = nil
+        deleted = nil
+    }
+    
+    override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        var attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
+        guard inserted!.contains(itemIndexPath) else { return attributes }
+        
+        attributes = layoutAttributesForItem(at: itemIndexPath)
+        attributes?.center = CGPoint(x: collectionView!.bounds.midX, y: collectionView!.bounds.midY)
+        attributes?.alpha = 0
+        return attributes
+    }
+    
+    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        var attributes = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath)
+        guard deleted!.contains(itemIndexPath) else { return attributes }
+        
+        attributes = layoutAttributesForItem(at: itemIndexPath)
+        attributes?.center = CGPoint(x: collectionView!.bounds.midX, y: collectionView!.bounds.midY)
+        attributes?.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+        return attributes
+    }
 }
