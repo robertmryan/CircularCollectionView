@@ -48,8 +48,10 @@ class CircleLayout: UICollectionViewLayout {
         }
     }
     
-    var inserted: [IndexPath]?
-    var deleted: [IndexPath]?
+    // MARK: - Handle insertion and deletion animation
+    
+    private var inserted: [IndexPath]?
+    private var deleted: [IndexPath]?
     
     override func prepare(forCollectionViewUpdates updateItems: [UICollectionViewUpdateItem]) {
         super.prepare(forCollectionViewUpdates: updateItems)
