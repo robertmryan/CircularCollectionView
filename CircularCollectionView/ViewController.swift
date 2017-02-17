@@ -23,24 +23,23 @@ class ViewController: UICollectionViewController {
             self.collectionView?.performBatchUpdates({
                 self.numberOfCells += 1
                 self.collectionView?.insertItems(at: [IndexPath(item: 0, section: 0)])
-            }, completion: nil)
+            })
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.collectionView?.performBatchUpdates({
                 self.numberOfCells -= 1
                 self.collectionView?.deleteItems(at: [IndexPath(item: 0, section: 0)])
-            }, completion: nil)
+            })
         }
     }
     
     // update collection view if size changes (e.g. rotate device)
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        coordinator.animateAlongsideTransition(in: view, animation: { context in
-            self.collectionView?.performBatchUpdates({
-            }, completion: nil)
-        }, completion: nil)
+        coordinator.animateAlongsideTransition(in: view, animation: { _ in
+            self.collectionView?.performBatchUpdates(nil)
+        })
     }
 }
 
